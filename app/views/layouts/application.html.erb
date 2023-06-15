@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RubyOnRailsStarterUsingImportmap</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>RubyOnRailsStarterUsingImportmap</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
 
-  <body class="vh-100">
-    <%= render 'shared/navbar' %>
-    
-    <%= yield %>
+</head>
 
-    <%= render "shared/footer" %>
-  </body>
+
+<body style="background-image: radial-gradient(white, rgb(200, 200, 200)); min-height: 100vh;">
+<%= render "shared/navbar" %>
+<div class="row">
+  <div class="col-2">
+    <%= render "shared/sidebar" %>
+  </div>
+  <div class="col-10">
+    <div class="main-container">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
